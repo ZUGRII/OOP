@@ -1,10 +1,14 @@
 #Convert Decimal to Binary
+#Author: Georgiana Zugravu
+#Date: 26th September 2019
+#Compiler: PyCharm
+
 import math
+
 number = input("Enter a number: ")
 number_int = int(number)
 
-binary = 0
-while(number!=0)
-    binary=number%2*10+binary
-    number=number/2
-print("The number in binary is: " binary)
+if(number_int<0):
+    print("The number is negative")
+else:
+    print("The number in binary is: ", bin(number_int))
