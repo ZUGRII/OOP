@@ -14,13 +14,23 @@ while play=='yes' or play=='y':
     second = input("Enter the second Gibberish syllable (* for vowel substitute):")
     word = input("Please enter a word you want to translate: ")
     i = 0
-    for i to
+    vowels = "aeiouAEIOU"
+    syllable=1
+    for i in word :
+        if i in vowels :
+            print("yeeeesss")
+            if syllable == 1:
+                word = word[0:word.find(i)] + first + word[word.find(i)+1: len(word)-1]
+                syllable = syllable + 1
+            else:
+                word = word[0:word.find(i)] + second + word[word.find(i) + 1: len(word) - 1]
+
 
 
     print("Your final word: ", word)
     play = input("Play again? (yes/no)")
 
-
+#def add_syllable()
 
 def  is_digit(syllable):
     return syllable.isdigit()
