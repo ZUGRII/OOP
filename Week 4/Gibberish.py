@@ -1,1 +1,33 @@
-# Author:Georgiana Zugravu
+# Gibberish program
+# Author:Georgiana Zugravu C18768301
+# Date: 10th October 2019
+
+import string
+import math
+
+print("This is Gibberish game\nInsert 2 sets of characters and an word\n"
+      "You will receive the word translated in Gibberish language")
+play='yes'
+
+while play=='yes' or play=='y':
+    first = input("Enter the first Gibberish syllable (add * for the vowel substitute): ")
+    second = input("Enter the second Gibberish syllable (* for vowel substitute):")
+    word = input("Please enter a word you want to translate: ")
+    i = 0
+    for i to
+
+
+    print("Your final word: ", word)
+    play = input("Play again? (yes/no)")
+
+
+
+def  is_digit(syllable):
+    return syllable.isdigit()
+
+
+def asterix(syllable):
+    if ord(syllable[0]==42):
+        return True
+    else:
+        return False
