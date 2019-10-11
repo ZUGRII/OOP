@@ -6,7 +6,7 @@
 # can only appear at the beginning of the syllable.
 
 
-# Generate method 'is_digit'
+# Generate funtion 'is_digit'
 # This will check if the input 'gibberish'is an alphabet letter
 def is_digit(syllable):
     i = 0
@@ -21,8 +21,8 @@ def is_digit(syllable):
     return check
 
 
-# Generate method 'asterix'
-# This method will check if the inputted 'gibberish' is the wildcard character (*)
+# Generate function 'asterix'
+# This function will check if the inputted 'gibberish' is the wildcard character (*)
 def asterix(syllable):
     if ord(syllable[0]) == 42:
         return True
@@ -30,8 +30,8 @@ def asterix(syllable):
         return False
 
 
-# Generate method 'add_syllable'
-# This method will contain the translated word
+# Generate function 'add_syllable'
+# This function will contain the translated word
 def add_syllable(new, syllable):
     new = new + syllable
     return new
@@ -68,7 +68,7 @@ while play == 'yes' or play == 'y':
                     first = word[i] + first[1: len(first)]
 
                 new_word = add_syllable(new_word, first)
-                syllable = syllable + 1 # change value os 'syllable' to stop the if statement
+                syllable = syllable + 1 # change value as 'syllable' to stop the if statement
 
             else:
                 if word[i - 1] not in vowels:  # if previous letter is not a vowel
