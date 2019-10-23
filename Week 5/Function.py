@@ -3,26 +3,17 @@
 # Date: 17 October 2019
 # Compiler: PyCharm
 
+import math
 
 def gcd(bigger, smaller) :
-    if(bigger> smaller):
-        if (bigger % smaller == 0):
-            return smaller
-        else:
-            return bigger % smaller
-    else:
-        if(smaller % bigger == 0):
-            return bigger
-        else:
-            return smaller % bigger
+    return math.gcd(bigger, smaller)
 
 
 def lcm(first, second):
-    great = gcd(first, second)
-    return (first * second ) / gcd(first, second)
+    return (first * second) / gcd(first, second)
 
 
-def addFrac(frac1, frac2):
+#def addFrac(frac1, frac2):
 
 
 
