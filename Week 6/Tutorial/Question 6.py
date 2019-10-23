@@ -3,8 +3,8 @@
 # Compiler: PyCharm
 
 L = [1,2,3,4]
-L = str(L)
+L = str(L)      #??
 
-str = ''.join([i for i in L])
+str = ''.join([i for i in L]) #??
 
 print(str)
