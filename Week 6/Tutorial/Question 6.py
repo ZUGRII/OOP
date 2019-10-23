@@ -5,7 +5,6 @@
 L = [1,2,3,4]
 L = str(L)
 
-str = ''.join(L)
-
+str = ''.join([i for i in L])
 
 print(str)
