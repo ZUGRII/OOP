@@ -36,7 +36,7 @@ for i in range(0, height):                       # create list of lists
     L.append(old_row)                            # append the new row to the list of lists
 
 
-print("Printing whole list of lists:\n", L)      # print the lists on one line
+print("\nPrinting whole list of lists:\n", L)      # print the lists on one line
 
 
 print("\nPrinting list of lists, one list at a time: ")
