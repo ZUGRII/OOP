@@ -25,9 +25,9 @@ def is_digit(syllable):
 # This function will check if the inputted 'gibberish' is the wildcard character (*)
 def asterix(syllable):
     if ord(syllable[0]) == 42:
-        return True
+        return 1
     else:
-        return False
+        return 0
 
 
 # Generate function 'add_syllable'
@@ -59,6 +59,7 @@ while play == 'yes' or play == 'y':
     vowels = "aeiouAEIOU"
     syllable = 1
     new_word = ''
+    check_asterix = 0
 
 # word check
     for i in range(0, len(word)):  # for loop to check each letter of the word
@@ -72,7 +73,8 @@ while play == 'yes' or play == 'y':
 
             else:
                 if word[i - 1] not in vowels:  # if previous letter is not a vowel
-                    if asterix(second):  # stores second vowel to use as the wildcard
+                    check_asterix += asterix(second)
+                    if check_asterix != 0:  # stores second vowel to use as the wildcard
                         second = word[i] + second[1:len(second)]
                     new_word = add_syllable(new_word, second)
 
