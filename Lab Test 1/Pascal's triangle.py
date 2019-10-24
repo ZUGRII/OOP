@@ -8,17 +8,17 @@
 def make_new_row (old_row):
     """This function generates a new row based on the previous one/
                 It creates Pascal's Triangle"""
-    if old_row == []:
-        new_row = [1]
-    elif old_row == [1]:
-        new_row = [1,1]
+    if old_row == []:                                       # if the list is empty
+        new_row = [1]                                       # new list is [1]
+    elif old_row == [1]:                                    # if the old list is [1]
+        new_row = [1,1]                                     # new list is [1,1]
     else:
-        new_row = [1,]
+        new_row = [1,]                                      # creates the new list
         for i in range(1, len(old_row)):
-            new_row.append(old_row[i-1] + old_row[i])
-        new_row.append(1)
+            new_row.append(old_row[i-1] + old_row[i])       # fill the list
+        new_row.append(1)                                   # append 1 at the end of the row
 
-    return new_row
+    return new_row                                           # return the new row
 
 
 #main function
@@ -47,5 +47,5 @@ for i in L:
 print("\n\nPrinting Pascal's triangle:")
 for j in range(0, len(L)):                      # create Pascal's triangle
 
-    print(' '.join([str(i) for i in L[j]]).center(100))
+    print(' '.join([str(i) for i in L[j]]).center(100))   # display each list as a string centred in the middle, with the width 100
     print("\n")
