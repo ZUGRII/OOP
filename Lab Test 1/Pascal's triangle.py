@@ -1,5 +1,5 @@
 # Pascal's triangle program
-# Authors: Georgiana Zugravu
+# Authors: Georgiana Zugravu C18768301
 # Date: 24 October 2019
 # Compiler: PyCharm
 
@@ -35,8 +35,8 @@ for i in range(0, height):                       # create list of lists
     old_row = make_new_row(old_row)              # call function make_new_row
     L.append(old_row)                            # append the new row to the list of lists
 
-print("Printing whole list of lists:\n", L)      # print the lists on one line
 
+print("Printing whole list of lists:\n", L)      # print the lists on one line
 
 
 print("\nPrinting list of lists, one list at a time: ")
