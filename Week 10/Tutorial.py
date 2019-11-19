@@ -20,4 +20,5 @@ class Rectangle():
 
 
 rect1 = Rectangle(8,2)
-print(rect1.calculate_area)
+print(rect1.calculate_area())
+print(rect1.calculate_perimeter())
