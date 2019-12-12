@@ -3,6 +3,8 @@
 # Date: 12th of December 2019
 # Compiler: PyCharm
 
+import math
+
 class Vector3D (object):
     def __init__(self, x=0, y=0, z=0):
         self.x = float(x)
@@ -39,6 +41,9 @@ class Vector3D (object):
             new = self.x*param.x + self.y*param.y + self.z*param.z
             return new
 
+    def magnitude(self):
+        output = math.sqrt(self.x**2 + self.y**2 + self.z**2)
+        return output
 
     def __str__(self):
         output = str.format('{:0.6f}, {:0.6f}, {:0.6f}',self.x, self.y, self.z )
@@ -71,3 +76,7 @@ v5 = v1*v2
 print("v1*v2=", v5)
 
 print("Printing integer multiplication")
+v6 = v1*2
+print("v1*2=", v6)
+
+print("v1 magnitude is", v1.magnitude())
