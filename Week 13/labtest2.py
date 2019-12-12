@@ -1,4 +1,4 @@
-# LAB TEST 2
+# LAB TEST 2 (3D Vector)
 # Authors: Georgiana Zugravu C18768301
 # Date: 12th of December 2019
 # Compiler: PyCharm
@@ -10,7 +10,6 @@ class Vector3D (object):
             and calculate different operations"""
     def __init__(self, x=0, y=0, z=0):
         """Default constructor, verify the type of the coordinates"""
-
         self.x = float(x)
         self.y = float(y)
         self.z = float(z)
@@ -41,7 +40,6 @@ class Vector3D (object):
             newx = self.x * param
             newy = self.y * param
             newz = self.z * param
-
             output = str.format('({:0.6f}, {:0.6f}, {:0.6f})', newx, newy, newz)
             return output
         elif type(param) == Vector3D:
@@ -63,33 +61,34 @@ class Vector3D (object):
 
 # sample call to test the class
 
+# create 2 objects
 v1 = Vector3D(1,2,3)
 v2 = Vector3D(5,5,5)
 
-print("\nPrinting v1")
+print("\nPrinting v1")              # printing first object
 print("v1=", v1)
 
-print("\nPrinting v2")
+print("\nPrinting v2")              # printing second object
 print("v2=", v2)
 
 v3 = v1 + v2
-print("\nPrinting addition")
+print("\nPrinting addition")        # printing the addition
 print("v1+v2 =", v3)
 
 v4 = v1 - v2
-print("\nPrinting subtraction")
+print("\nPrinting subtraction")     # printing subtraction
 print("v1-v2=", v4)
 
 v5 = v1*v2
-print("\nPrinting dot product")
+print("\nPrinting dot product")     # printing dot product
 print("v1*v2=", v5)
 
 v6 = v1*2
-print("\nPrinting integer multiplication")
+print("\nPrinting integer multiplication")  # printing integer multiplication
 print("v1*2=", v6)
 
 v7 = v1*2.5
-print("\nPrinting integer multiplication")
+print("\nPrinting integer multiplication")  # printing float multiplication
 print("v1*2.5=", v7)
 
-print("\nv1 magnitude is", v1.magnitude())
+print("\nv1 magnitude is", v1.magnitude())  # printing magnitude
