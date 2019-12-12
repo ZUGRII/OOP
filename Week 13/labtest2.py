@@ -6,12 +6,19 @@
 import math
 
 class Vector3D (object):
+    """Class which stores the coordinates of a 3D vector
+            and calculate different operations"""
     def __init__(self, x=0, y=0, z=0):
-        self.x = float(x)
+        """Default constructor, verify the type of the coordinates"""
+
+        if type(x) == int or type(x) == float:
+            self.x = float(x)
+
         self.y = float(y)
         self.z = float(z)
 
     def __add__(self, param):
+        """Method which calculate the addintion of two vectors"""
         newx = self.x + param.x
         newy = self.y + param.y
         newz = self.z + param.z
@@ -20,6 +27,7 @@ class Vector3D (object):
         return output
 
     def __sub__(self, param):
+        """Method which calculate the subtraction of two vectors"""
         newx = self.x + (param.x*(-1))
         newy = self.y + (param.y*(-1))
         newz = self.z + (param.z*(-1))
@@ -29,6 +37,9 @@ class Vector3D (object):
         #return self.__sub__()
 
     def __mul__(self, param):
+        """Metod which calculate the multiplication of
+                1. a vector by an integer
+                2. two vectors"""
         if type(param) == int:
             newx = self.x * param
             newy = self.y * param
@@ -42,10 +53,12 @@ class Vector3D (object):
             return new
 
     def magnitude(self):
+        """Method which calculate the magnitude of a vector"""
         output = math.sqrt(self.x**2 + self.y**2 + self.z**2)
         return output
 
     def __str__(self):
+        """String method, returns the coordinates of the vector"""
         output = str.format('{:0.6f}, {:0.6f}, {:0.6f}',self.x, self.y, self.z )
         return output
 
